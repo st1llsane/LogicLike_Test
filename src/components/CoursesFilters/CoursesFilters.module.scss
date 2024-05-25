@@ -8,11 +8,11 @@
 	&List {
 		display: flex;
 		flex-direction: column;
-		padding: 12px;
+		padding: 11px;
 
 		li {
 			display: block;
-			padding: 12px;
+			padding: 8px 12px 7px 12px;
 			border-radius: 12px;
 			cursor: pointer;
 			will-change: transform;

@@ -3,4 +3,10 @@
 	grid-template-columns: 264px minmax(min-content, 1215px);
 	gap: 24px;
 	padding-top: 100px;
+
+	&Content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }

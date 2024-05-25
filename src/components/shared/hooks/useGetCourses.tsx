@@ -6,6 +6,7 @@ import { Course } from '../types/types'
 export const useGetCourses = () => {
 	const [courses, setCourses] = useState<Course[] | []>([])
 	const [filteredCourses, setFilteredCourses] = useState<Course[] | []>([])
+	const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
 		const getCourses = async () => {
@@ -18,6 +19,8 @@ export const useGetCourses = () => {
 				setFilteredCourses(res.data)
 			} catch (error) {
 				console.log('Error on fetching courses', error)
+			} finally {
+				setIsLoading(false)
 			}
 		}
 
@@ -36,10 +39,9 @@ export const useGetCourses = () => {
 	}
 
 	return {
-		courses,
 		coursesTags,
 		filteredCourses,
-		setFilteredCourses,
+		isLoading,
 		setCoursesByTag,
 	}
 }

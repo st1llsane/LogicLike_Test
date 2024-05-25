@@ -1,7 +1,16 @@
 @import './vars.module.scss';
 
+@font-face {
+	font-family: 'Nunito';
+	src: url('./fonts/Nunito-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
 .app {
-	font-family: sans-serif;
+	font-family: 'Nunito', sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 	color: $c-foreground;
 	font-size: $font-sm;
 	font-weight: $font-w-extra;

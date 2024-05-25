@@ -1,32 +1,22 @@
+@import '../../vars.module.scss';
+
 .coursesList {
 	width: 100%;
 	max-width: 1215px;
 	display: grid;
 	gap: 18px;
 	grid-template-columns: repeat(3, minmax(177px, 393px));
-	grid-auto-rows: 210px;
+	grid-auto-rows: max-content;
 
 	&Item {
 		display: flex;
 		flex-direction: column;
-		background-color: #fff;
+		background-color: $c-background;
 		border-radius: 18px;
-		box-shadow: 0 10px 13px -4px #23235f30;
+		box-shadow: 0 10px 13px -4px $c-shadow;
 		cursor: pointer;
 		will-change: transform;
 		transition: transform 0.25s ease-in-out;
-
-		// display: flex;
-		// flex-direction: column;
-		// background-color: #fff;
-		// border-radius: 18px;
-		// background-position: 50% 9px;
-		// background-size: 144px 144px;
-		// padding-top: 162px;
-		// background-repeat: no-repeat;
-		// box-shadow: 0 10px 13px -4px #23235f30;
-		// will-change: transform;
-		// transition: transform 0.3s ease;
 
 		&:hover {
 			transform: translateY(-4px);
@@ -48,8 +38,10 @@
 		}
 
 		h3 {
+			font-size: $font-sm;
 			line-height: 1;
-			padding: 18px 12px 18px 18px;
+			padding: 12px 19px 18px 19px;
+			flex: 1;
 		}
 	}
 }

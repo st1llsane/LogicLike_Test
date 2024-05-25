@@ -1,9 +1,11 @@
 import { FC } from 'react'
+
 import { Course } from '../shared/types/types'
+
 import styles from './CoursesList.module.scss'
 
 interface CoursesListProps {
-	courses: Course[] | null
+	courses: Course[] | []
 }
 
 const CoursesList: FC<CoursesListProps> = ({ courses }) => {
@@ -23,16 +25,5 @@ const CoursesList: FC<CoursesListProps> = ({ courses }) => {
 		</div>
 	)
 }
-
-// ;<div
-// 	key={course.id}
-// 	className={styles.coursesListItem}
-// 	style={{
-// 		backgroundColor: course.bgColor,
-// 		backgroundImage: `url(${course.image})`,
-// 	}}
-// >
-// 	<h3>{course.name}</h3>
-// </div>
 
 export default CoursesList
