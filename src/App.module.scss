@@ -1,0 +1,11 @@
+@import './vars.module.scss';
+
+.app {
+	font-family: sans-serif;
+	color: $c-foreground;
+	font-size: $font-sm;
+	font-weight: $font-w-extra;
+	width: 100%;
+	min-height: 100vh;
+	padding: 0 30px;
+}

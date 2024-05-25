@@ -1,0 +1,31 @@
+@import '../../vars.module.scss';
+
+.coursesFilters {
+	border: 1px solid $c-border;
+	border-radius: 18px;
+	height: max-content;
+
+	&List {
+		display: flex;
+		flex-direction: column;
+		padding: 12px;
+
+		li {
+			display: block;
+			padding: 12px;
+			border-radius: 12px;
+			cursor: pointer;
+			will-change: transform;
+			transition: color 0.25s;
+
+			&:not(.active):hover {
+				color: $c-accent;
+			}
+
+			&.active {
+				color: $c-background;
+				background-color: $c-accent;
+			}
+		}
+	}
+}

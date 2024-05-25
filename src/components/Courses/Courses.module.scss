@@ -1,0 +1,6 @@
+.courses {
+	display: grid;
+	grid-template-columns: 264px minmax(min-content, 1215px);
+	gap: 24px;
+	padding-top: 100px;
+}
